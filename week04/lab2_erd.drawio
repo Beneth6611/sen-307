@@ -1,0 +1,117 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Lab2 ERD" id="lab2erd">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="Lab 2 ERD: University Course Registration" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="0" width="360" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="dept" value="Department" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="220" height="82" as="geometry"/>
+        </mxCell>
+        <mxCell id="dept1" value="PK  dept_id  INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="dept">
+          <mxGeometry y="30" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="dept2" value="dept_name  VARCHAR(100)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="dept">
+          <mxGeometry y="56" width="220" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="student" value="Student" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="220" height="134" as="geometry"/>
+        </mxCell>
+        <mxCell id="student1" value="PK  student_id  INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="student">
+          <mxGeometry y="30" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="student2" value="matric_no  VARCHAR(20)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="student">
+          <mxGeometry y="56" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="student3" value="full_name  VARCHAR(100)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="student">
+          <mxGeometry y="82" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="student4" value="FK  dept_id  INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="student">
+          <mxGeometry y="108" width="220" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="lecturer" value="Lecturer" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="640" y="220" width="220" height="108" as="geometry"/>
+        </mxCell>
+        <mxCell id="lecturer1" value="PK  lecturer_id  INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="lecturer">
+          <mxGeometry y="30" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="lecturer2" value="full_name  VARCHAR(100)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="lecturer">
+          <mxGeometry y="56" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="lecturer3" value="FK  dept_id  INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="lecturer">
+          <mxGeometry y="82" width="220" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="enrolment" value="Enrolment" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="460" width="220" height="134" as="geometry"/>
+        </mxCell>
+        <mxCell id="enrolment1" value="PK  enrolment_id  INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="enrolment">
+          <mxGeometry y="30" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="enrolment2" value="FK  student_id  INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="enrolment">
+          <mxGeometry y="56" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="enrolment3" value="FK  course_id  INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="enrolment">
+          <mxGeometry y="82" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="enrolment4" value="session  VARCHAR(9)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="enrolment">
+          <mxGeometry y="108" width="220" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="course" value="Course" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="340" y="473" width="220" height="108" as="geometry"/>
+        </mxCell>
+        <mxCell id="course1" value="PK  course_id  INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="course">
+          <mxGeometry y="30" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="course2" value="course_code  VARCHAR(10)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="course">
+          <mxGeometry y="56" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="course3" value="course_title  VARCHAR(100)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="course">
+          <mxGeometry y="82" width="220" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="teaching" value="Teaching" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="640" y="460" width="220" height="134" as="geometry"/>
+        </mxCell>
+        <mxCell id="teaching1" value="PK  teaching_id  INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="teaching">
+          <mxGeometry y="30" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="teaching2" value="FK  course_id  INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="teaching">
+          <mxGeometry y="56" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="teaching3" value="FK  lecturer_id  INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="teaching">
+          <mxGeometry y="82" width="220" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="teaching4" value="session  VARCHAR(9)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;" vertex="1" parent="teaching">
+          <mxGeometry y="108" width="220" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmany;startFill=0;endArrow=ERmandOne;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="student" target="dept">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmany;startFill=0;endArrow=ERmandOne;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="lecturer" target="dept">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmany;startFill=0;endArrow=ERmandOne;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="enrolment" target="student">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmany;startFill=0;endArrow=ERmandOne;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="enrolment" target="course">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmany;startFill=0;endArrow=ERmandOne;endFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="teaching" target="course">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=ERmany;startFill=0;endArrow=ERmandOne;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="teaching" target="lecturer">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
