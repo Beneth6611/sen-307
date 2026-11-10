@@ -1,0 +1,3 @@
+# Lab 4 Notes
+
+When I tried to delete the "Library and Information Science" department, MySQL gave me Error 1451 (cannot delete or update a parent row). It refuses because a student, Transfer Student, still points to that department through the `dept_id` foreign key. If MySQL allowed the delete, that student would be linked to a department that no longer exists. To fix it, I first used UPDATE to move the student into Software Engineering, and after that the DELETE worked. The student was moved, not lost. Another option would be to set the foreign key to `ON DELETE SET NULL`, so the student's department is just cleared automatically when the department is deleted.
